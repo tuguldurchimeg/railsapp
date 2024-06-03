@@ -29,10 +29,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_03_013526) do
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
-  create_table "movies", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   add_foreign_key "comments", "articles"
 end
